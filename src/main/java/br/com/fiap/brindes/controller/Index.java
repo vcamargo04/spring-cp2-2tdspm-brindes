@@ -1,6 +1,5 @@
 package br.com.fiap.brindes.controller;
 
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,13 +16,13 @@ public class Index {
 
     /**
      * Exibe a página inicial da loja.
-     *
+     * <p>
      * https://www.thymeleaf.org/doc/tutorials/3.1/usingthymeleaf.html
      *
      * @param p
      * @return
      */
-    @PreAuthorize("hasRole('USER')")
+
     @GetMapping
     public ModelAndView index(Principal p) {
         var mv = new ModelAndView( "index" );
@@ -33,10 +32,11 @@ public class Index {
 
     /**
      * Acessa detalhes do Usuário Autenticado JSON
+     *
      * @param p
      * @return
      */
-    @PreAuthorize("hasRole('ADMIN')")
+
     @GetMapping(value = "/user")
     public Principal user(Principal p) {
         return p;

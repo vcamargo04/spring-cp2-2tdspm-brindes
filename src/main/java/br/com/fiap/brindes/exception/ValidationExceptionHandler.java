@@ -6,7 +6,6 @@ import jakarta.validation.ConstraintViolationException;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -69,21 +68,6 @@ public class ValidationExceptionHandler {
     }
 
 
-    @ExceptionHandler(AccessDeniedException.class)
-    @ResponseStatus(HttpStatus.UNAUTHORIZED)
-    public ResponseEntity<ErrorResponse> notAuthorized(
-            Exception ex, HttpServletRequest request) {
-        ErrorResponse response = new ErrorResponse();
-        response.setStatus( HttpStatus.UNAUTHORIZED.value() );
-        response.setTitle( "Não Autorizado" );
-        response.setMessage( ex.getMessage() );
-        response.setLocalizedMessage( ex.getLocalizedMessage() );
-        response.setEndpoint( getEndpointFromRequest( request ) );
-
-        // Aqui você pode adicionar informações adicionais ao objeto ErrorResponse, se necessário.
-
-        return new ResponseEntity<>( response, HttpStatus.UNAUTHORIZED );
-    }
     private String getEndpointFromRequest(HttpServletRequest request) {
         return request.getRequestURI();
     }

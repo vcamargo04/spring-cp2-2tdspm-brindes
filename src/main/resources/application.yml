@@ -12,9 +12,3 @@ spring:
   # Development properties (also used for docker-compose)
   config:
     import: optional:file:.env[.properties]
-  # Configuração de Segurança
-  security:
-    user:
-      name: ${EMAIL_FIAP:email@fiap.com.br}
-      password: ${EMAIL_FIAP:email@fiap.com.br}
-      roles: "USER, ADMIN"

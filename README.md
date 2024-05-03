@@ -36,14 +36,6 @@ desta loja e a opção de cadastramento de tudo que será comercializado pelas l
 Criaremos, nesta aula, um Produto Mínimo Viável (PMV) de uma API Rest para o sistema que alimentará, entre outras, as
 telas exibidas abaixo:
 
-### ATENÇÃO
-
-Não se esqueça de abrir o arquivo .env e colocar na variável **EMAIL_FIAP** o seu email pois, na tela de login,
-o usuário e senha será igual a este email. Caso não informe, o usuário e senha serão: **email@fiap.com.br**.
-
-Para efetuar o login acesse: localhost
-Para efetuar o logout acesse: localhost/logout
-
 
 ## Loja
 

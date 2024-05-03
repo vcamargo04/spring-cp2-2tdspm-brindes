@@ -20,7 +20,7 @@
 
                     <ul class="uk-navbar-nav">
                         <li>
-                            <a href="#" th:text="${usuario?.name}">Parent</a>
+                            <a href="#">Aluno</a><!--                             th:text="${usuario?.name}"-->
                             <div class="uk-navbar-dropdown">
                                 <ul class="uk-nav uk-navbar-dropdown-nav">
                                     <li class="uk-active">
@@ -32,10 +32,10 @@
 
                                     <li>
                                         <ul>
-                                            <li th:each="p : ${usuario?.authorities}">
-                                                <a href="/user"
-                                                   th:if="${p.authority=='ROLE_ADMIN'}">ADMINISTRAR SISTEMA</a>
-                                            </li>
+                                            <!--                                            <li th:each="p : ${usuario?.authorities}">-->
+                                            <!--                                                <a href="/user"-->
+                                            <!--                                                   th:if="${p.authority=='ROLE_ADMIN'}">ADMINISTRAR SISTEMA</a>-->
+                                            <!--                                            </li>-->
                                         </ul>
                                     </li>
                                     <li>
