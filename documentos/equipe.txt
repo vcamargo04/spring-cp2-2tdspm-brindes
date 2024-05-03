@@ -1,0 +1,9 @@
+RM:......... NOME: ......................TURMA:................
+RM:......... NOME: ......................TURMA:................
+RM:......... NOME: ......................TURMA:................
+
+Atenção Não se esqueça de abrir o arquivo .env e colocar na variável EMAIL_FIAP o seu email pois, na tela de login,
+o usuário e senha será igual a este email. Caso não informe o usuário e senha serão:
+email@fiap.com.br.
+
+Para efetuar o logout acesse: localhost/logout
