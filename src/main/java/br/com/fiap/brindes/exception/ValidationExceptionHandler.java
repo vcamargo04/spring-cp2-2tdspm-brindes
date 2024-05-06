@@ -1,9 +1,5 @@
 package br.com.fiap.brindes.exception;
 
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.validation.ConstraintViolation;
-import jakarta.validation.ConstraintViolationException;
-import lombok.Data;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -11,6 +7,11 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
+import lombok.Data;
 
 
 @ControllerAdvice
@@ -59,7 +60,7 @@ public class ValidationExceptionHandler {
         response.setStatus( HttpStatus.INTERNAL_SERVER_ERROR.value() );
         response.setTitle( "Erro interno do servidor" );
         response.setMessage( ex.getMessage() );
-        response.setLocalizedMessage( ex.getLocalizedMessage() );
+        response.setMessage( ex.getLocalizedMessage() );
         response.setEndpoint( getEndpointFromRequest( request ) );
 
         // Aqui você pode adicionar informações adicionais ao objeto ErrorResponse, se necessário.
@@ -81,7 +82,22 @@ public class ValidationExceptionHandler {
         private String localizedMessage;
         private String title;
         private String endpoint;
-
         // Getters e Setters
+		public void setStatus(int value) {
+			// TODO Auto-generated method stub
+			
+		}
+		public void setEndpoint(String endpointFromRequest) {
+			// TODO Auto-generated method stub
+			
+		}
+		public void setMessage(String message2) {
+			// TODO Auto-generated method stub
+			
+		}
+		public void setTitle(String string) {
+			// TODO Auto-generated method stub
+			
+		}
     }
 }

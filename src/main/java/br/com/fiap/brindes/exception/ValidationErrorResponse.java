@@ -31,4 +31,22 @@ public class ValidationErrorResponse {
         }
 
     }
+
+
+	public void setEndpoint(String endpointFromRequest) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void setMessage(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void setStatus(int value) {
+		// TODO Auto-generated method stub
+		
+	}
 }
