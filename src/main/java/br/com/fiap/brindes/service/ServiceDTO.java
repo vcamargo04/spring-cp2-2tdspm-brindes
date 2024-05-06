@@ -58,5 +58,5 @@ public interface ServiceDTO<Entity, Request, Response> {
      */
     public Response toResponse(Entity e);
 
-
+    // Vinicius de Araújo Camargo rm99494
 }

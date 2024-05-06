@@ -38,4 +38,6 @@ public class CategoriaResource {
         CategoriaResponse response = categoriaService.buscarCategoriaPorId(id);
         return ResponseEntity.ok(response);
     }
+    
+ // Vinicius de Araújo Camargo rm99494
 }

@@ -31,4 +31,6 @@ public class LojaResponse {
     public void setNome(String nome) {
         this.nome = nome;
     }
+    
+    // Vinicius de Araújo Camargo rm99494
 }

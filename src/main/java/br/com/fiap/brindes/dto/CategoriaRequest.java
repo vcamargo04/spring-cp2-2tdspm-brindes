@@ -16,7 +16,7 @@ public class CategoriaRequest {
     public String getNome() {
         return nome;
     }
-
+    // Vinicius de Araújo Camargo rm99494
     public void setNome(String nome) {
         this.nome = nome;
     }

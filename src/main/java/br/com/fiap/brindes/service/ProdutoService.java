@@ -69,4 +69,6 @@ public class ProdutoService implements ServiceDTO<Produto, ProdutoRequest, Produ
         Produto produto = findById(id);
         return toResponse(produto);
     }
+    
+    // Vinicius de Araújo Camargo rm99494
 }

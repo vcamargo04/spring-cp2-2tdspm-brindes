@@ -40,4 +40,6 @@ public class ProdutoResource {
         ProdutoResponse response = produtoService.buscarProdutoPorId(id);
         return ResponseEntity.ok(response);
     }
+    
+    // Vinicius de Araújo Camargo rm99494
 }

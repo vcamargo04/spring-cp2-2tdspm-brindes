@@ -15,6 +15,8 @@ import br.com.fiap.brindes.dto.LojaResponse;
 import br.com.fiap.brindes.dto.ProdutoRequest;
 import br.com.fiap.brindes.service.LojaService;
 
+// Vinicius de Araújo Camargo rm99494
+
 @RestController
 @RequestMapping("/lojas")
 public class LojaResource {
